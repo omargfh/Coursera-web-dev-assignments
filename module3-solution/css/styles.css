@@ -16,7 +16,7 @@ body {
 
 .navbar-collapse {
 	margin-top: 55px;
-}
+}	
 .navbar-toggle {
 	clear: both;
 	margin-top: 15px;
@@ -74,8 +74,6 @@ body {
 }
 
 .article-content {
-	margin-left: 40px;
-	margin-right: 40px;
 	overflow: hidden;
 	}
 
