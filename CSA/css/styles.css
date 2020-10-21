@@ -1,0 +1,159 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F1F1F1;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+}
+
+.header {
+	color: white;
+	position: relative;
+	background-color: black;
+	height: 350px;
+}
+
+.header-background {
+	background: url(../images/header-sample.jpg) no-repeat center;
+	width: 400px;
+	height: 350px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.navbar-default {
+	position: relative;
+	background-color: #ffffff00;
+	border: 0px;
+}
+
+.navbar-default h1 {
+	float: left;
+	margin-top: 100px;
+	color: white;
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+.navbar-default p {
+	font-family: 'Nunito', sans-serif;
+	color: white;
+}
+
+.navbar-container {
+	position: absolute;
+	top: 0;
+}
+
+.nav-item li a span {
+	margin-bottom: 2px;
+	color: #959595;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+#nav-list a:active span, #nav-list a:hover span, #nav-list a:focus span {
+	color: white;
+	background-color: #ffffff00;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+	background-color: #ffffff00;
+}
+
+.navbar-collapse {
+	padding-left: 0px;
+}
+
+.header-element-lead {
+	position: relative;
+}
+
+.nav-container {
+	position: absolute;
+	top: 0;
+}
+
+.icon-bar {
+	background-color: white;
+}
+
+
+a:active .nav-active, a:focus .nav-active, a:hover .nav-active {
+	width: 100%;
+	height: 5px;
+	margin-top: 2px;
+	border-radius: 12%;
+	color: white;
+	background-color: white;
+}
+
+a:focus {
+	outline: none;
+	background-color: #ffffff00;
+
+}
+
+.search-bar {
+	width: 140px;
+	height: 45px;
+	padding: 6px;
+	overflow: visible;
+	border-radius: 5%;
+	text-transform: uppercase;
+	color: #979797;
+	font-size: 30px
+}
+
+.nav-item .nav-first {
+	padding-left: 0px;
+}
+
+
+.navbar-header {
+	position: absolute;
+	top: 0;
+}
+
+@media (min-width: 501px) and (max-width: 991px) {
+	.header-background {
+			opacity: 0.5;
+	}
+}
+
+@media (max-width: 500px) {
+	.header-background {
+		visibility: hidden;
+	}
+}
+
+@media (max-width: 767px) {
+	.nav-container {
+		bottom: 0;
+	}
+
+	.nav-item .nav-first {
+		box-sizing: content-box;
+		padding-left: 15px;
+	}
+
+	#collapsable-nav {
+		align-content: center;
+		margin-top: 350px;
+		background-color: black;
+		color: white;
+	}
+
+	.no-margin-xs {
+		margin-left: 0;
+	}
+
+	.nav-container {
+		width: 100%;
+		margin-left: 15px;
+		padding-left: 0;
+	}
+}
