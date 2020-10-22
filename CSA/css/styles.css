@@ -8,6 +8,10 @@ body {
 	font-size: 16px;
 }
 
+.hidden {
+	visibility: hidden;
+}
+
 .header {
 	color: white;
 	position: relative;
@@ -81,6 +85,9 @@ body {
 	background-color: white;
 }
 
+#search-bar-text, #search-bar-text:focus {
+	border: none;
+}
 
 a:active .nav-active, a:focus .nav-active, a:hover .nav-active {
 	width: 100%;
@@ -97,15 +104,37 @@ a:focus {
 
 }
 
+.search-field {
+	background-color: #ffffff00;
+	border: none;
+	outline: none;
+	width: 330px;
+	height: 34px;
+	margin: 0px -4px 0px 0px;
+}
+
+
 .search-bar {
-	width: 140px;
+	width: 150px;
 	height: 45px;
 	padding: 6px;
-	overflow: visible;
-	border-radius: 5%;
+	padding: 6px 10px 10px 10px;
+	background-color: #EEEEEE;
+	border-radius: 20px;
 	text-transform: uppercase;
 	color: #979797;
 	font-size: 30px
+}
+
+.animate-search-bar {
+	animation-name: width;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+}
+
+@keyframes width {
+	from {width : 150px;}
+	to {width: 350px;}
 }
 
 .nav-item .nav-first {
@@ -131,6 +160,35 @@ a:focus {
 }
 
 @media (max-width: 767px) {
+
+	.search-bar {
+		width: 100%;
+		height: 55px;
+		padding: 6px 10px 10px 10px;
+		background-color: #DDDDDD;
+		border-radius: 0px;
+		text-transform: uppercase;
+		color: #979797;
+		font-size: 30px
+		position: absolute;
+		bottom: 0;
+		outline: none;
+	}
+
+	#search-bar-text {
+		background-color: #DDDDDD;
+		outline: none;
+
+	}
+	
+	.header-mini {
+		color: white;
+		position: relative;
+		background-color: black;
+		width: 100%;
+		height: 227px;
+	}
+
 	.nav-container {
 		bottom: 0;
 	}
@@ -142,7 +200,7 @@ a:focus {
 
 	#collapsable-nav {
 		align-content: center;
-		margin-top: 350px;
+		margin-left: 30px;
 		background-color: black;
 		color: white;
 	}

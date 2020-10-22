@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript Test</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: monospace;
+				font-size: 16px;
+				font-weight: bold;
+				background-color: #999988;
+			}
+
+			h1 {
+				color: maroon;
+				text-transform: uppercase;
+			}
+
+			span {
+				padding-bottom: 5px;
+				background-color: white;
+				border-radius: 5px;
+				box-shadow: 5px 5px 5px black;
+			}
+
+			input {
+				width: 200px;
+				border: none;
+			}
+
+			form {
+				margin-bottom: 10px;
+			}
+
+			.form-text {
+				font-weight: 100;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="home-title">Hello World!</h1>
+		<form onsubmit="return false">
+			<span><span class="form-text">First Name</span><input type="text" id="fName"><br></span>
+			<span><span class="form-text">Last Name&nbsp;</span><input type="text" id="lName"><br></span>
+			<span><span class="form-text">Savings&nbsp;&nbsp;&nbsp;</span><input type="text" id="totalSaving"><br></span>
+			<span><span class="form-text">Debt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="text" id="totalDebt"><br></span>
+			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="button" type="submit" value="Calculate"></span>
+		</form>
+		<div id="result-value"></div>
+		<script>
+
+			document.querySelector("#button").addEventListener("click", calculateWorth);
+
+			function calculateWorth () {
+				var fName = document.getElementById("fName").value;
+				var lName = document.getElementById("lName").value;
+				var totalSaving = document.getElementById("totalSaving").value;
+				var totalDebt = document.getElementById("totalDebt").value;
+
+				function doMath() {
+					return totalSaving - totalDebt;
+				}
+
+				var netWorth = doMath();
+				console.log(netWorth);
+
+				document.getElementById("result-value").innerHTML = "<span> Hi, " + fName + " " + lName + ". </span><br><span>Your total worth is " + "$" + netWorth +"</span>";
+			}
+		</script>
+	</body>
+</HTML>
