@@ -98,9 +98,7 @@ function buildAndShowHomeHTML (categories) {
     homeHtmlUrl,
     function (response) {
 
-      var categoryChosen = chooseRandomCategory(categories);
-      var shortName = "short_name";
-      var chosenCategoryShortName = categoryChosen.shortName;
+      var chosenCategoryShortName = chooseRandomCategory(categories)["short_name"];
       var propString = "'" + chosenCategoryShortName + "'";
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
