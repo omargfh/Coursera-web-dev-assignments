@@ -96,10 +96,11 @@ function buildAndShowHomeHTML (categories) {
   // Load home snippet page
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
-    function (homeHtml) {
+    function (response) {
 
-      var category = categories.short_name;
-      var chosenCategoryShortName = chooseRandomCategory(category);
+      var categoryChosen = chooseRandomCategory(categories);
+      var shortName = "short_name";
+      var chosenCategoryShortName = categoryChosen.shortName;
       var propString = "'" + chosenCategoryShortName + "'";
 
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
@@ -108,9 +109,8 @@ function buildAndShowHomeHTML (categories) {
       // var chosenCategoryShortName = ....
 
       $ajaxUtils.sendGetRequest(
-        homeHtml, function (homeHtml) {
-            var html = insertProperty(homeHtml, "randomCategoryShortName", propString);
-
+        homeHtmlUrl, function (response) {
+            var html = insertProperty(response, "randomCategoryShortName", propString);
             insertHtml("#main-content", html);
         },
         false);
