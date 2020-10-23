@@ -385,6 +385,7 @@ a:focus {
 @media (min-width: 991px) and (max-width: 1199px) {
 	#contribute-row {
 		margin-right: 10px;
+		padding-right: 0;
 	}
 }
 
@@ -416,12 +417,6 @@ a:focus {
 @media (max-width: 290px) {
 	.header-background {
 		visibility: hidden;
-	}
-}
-
-@media (min-width: 991px) {
-	#contribute-row {
-		padding-right: 0;
 	}
 }
 
