@@ -48,10 +48,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	});
 
 
-	// fieldCol.onblur = function() {
-	// 	fieldCol.classList.add("hidden");
-	// 	searchBarTextCol.classList.remove("hidden");
-	// }
+	fieldCol.onblur = function() {
+		fieldCol.classList.add("hidden");
+		searchBarTextCol.classList.remove("hidden");
+	}
 
 	document.getElementById("search-bar-text-mobile").addEventListener("click", function() {
 		searchBarTextMobile.classList.add("hidden");
