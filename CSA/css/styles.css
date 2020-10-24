@@ -117,6 +117,7 @@ body {
 #search-bar-text, #search-bar-text:focus {
 	border: none;
 }
+#search-bar-col button {width: 100%;clear: both;margin: 30px 0px;outline:  none;border: none;padding: 10px;font-size: 2em;color: #b5b5b5;}
 
 .footer {
 	width: 100%;
@@ -131,6 +132,7 @@ body {
 
 .footer ul {
 	list-style: none;
+	text-indent: 20px;
 }
 
 .footer a {
@@ -218,7 +220,7 @@ a:focus {
 }
 
 #content-left {
-    box-shadow: -5px 3px #f3f3f3;
+    box-shadow: -5px 3px 0px 0.5px #f3f3f3;
 }
 
 .profile-picture {
@@ -227,7 +229,7 @@ a:focus {
 	margin: -125px;
 	margin-bottom: 20px;
 	position: absolute;
-	top: 20%;
+	top: 15%;
 	left: 50%;
 	border-radius: 50%;
 	background: url(../images/ariana-dp.jpg) no-repeat;
@@ -242,7 +244,7 @@ a:focus {
 	font-size: 25px;
 	color: #b5b5b5;
 	position: absolute;
-	top: 40%;
+	top: 30%;
 }
 
 .text-left p {
@@ -370,6 +372,67 @@ a:focus {
 	top: 0;
 }
 
+#content-right .c-o {
+	width: 100%;
+	height: 90px;
+	border-radius: 80px;
+	box-shadow: 5px 5px 0 4px #f3f3f3;
+}
+
+.c-o h1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 3em;
+}
+
+.c-o a {
+	color: #d4d3d3;
+}
+.c-o a:hover {
+	text-decoration: none;
+	color: #b5b5b5;
+}
+
+.c-o a:focus, .c-o a:visited {
+	text-decoration: none;
+	color: #b5b5b5;
+}
+
+.c-b {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.c-b-animate {
+	animation-name: floating;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.c-b-animate-reverse {
+	animation-name: floating_reverse;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes floating {
+	from {left: 0%;}
+	to {left: 100%;}
+}
+
+@keyframes floating_reverse {
+	from {left: 100%;}
+	to {left: 0%;}
+}
+
+@media (max-width: 620px) {
+	.c-o h1 {
+		font-size: 9vw;
+	}
+}
+
 @media (min-width: 1199px) {
 	.sep-text{
 		padding: 0px 10px;
@@ -411,6 +474,14 @@ a:focus {
 	.story {
 		width: 45%;
 		padding-top: 45%;
+	}
+
+	#content-right .c-o {
+		height: 70px;
+	}
+
+	.c-o h1 {
+		font-size: 2em;
 	}
 }
 
@@ -505,9 +576,8 @@ a:focus {
 	#search-bar-text {
 		background-color: #DDDDDD;
 		outline: none;
-
 	}
-	
+
 	.header-mini {
 		color: white;
 		position: relative;

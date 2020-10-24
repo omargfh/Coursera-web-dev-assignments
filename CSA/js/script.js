@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	field.onblur = function() {
 		field.classList.add("hidden");
+		searchBar.classList.remove("animate-search-bar");
 		searchBar.classList.add("deanimate-search-bar");
 		searchBarText.classList.remove("hidden");
-		searchBar.classList.remove("animate-search-bar");
 	}
 
 	document.getElementById("search-bar-text-mobile").addEventListener("click", function() {
@@ -59,6 +59,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		snapchat.classList.toggle("story-animate")
 		snap_logo.classList.toggle("hidden")
 	});
+
+	var underButton = document.getElementById("under-button");
+
+	document.getElementById("ig-button").addEventListener("click", function() {
+		underButton.classList.add("c-b-animate-reverse");
+		underButton.classList.remove("c-b-animate");
+	});
+	document.getElementById("snap-button").addEventListener("click", function() {
+		underButton.classList.add("c-b-animate");
+		underButton.classList.remove("c-b-animate-reverse");
+	})
 
 	// document.querySelector("body").addEventListener("click", function() {
 	// 	searchBarText.classList.remove("hidden");
