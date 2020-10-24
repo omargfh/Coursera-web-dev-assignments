@@ -117,7 +117,10 @@ body {
 #search-bar-text, #search-bar-text:focus {
 	border: none;
 }
-#search-bar-col button {width: 100%;clear: both;margin: 30px 0px;outline:  none;border: none;padding: 10px;font-size: 2em;color: #b5b5b5;}
+
+#search-bar-col {width: 100%;margin: 30px 0px;background-color: #efefef;padding: 10px;font-size: 2em;}
+#search-bar-col button {width: 100%;clear: both;outline: none;border: none;color: #b5b5b5;}
+#search-bar-col input {width: 100%;}
 
 .footer {
 	width: 100%;
@@ -427,11 +430,38 @@ a:focus {
 	to {left: 0%;}
 }
 
-@media (max-width: 620px) {
+@media (max-width: 300px) {
+	#content-right .c-o {
+		height: 60px;
+	}
+
 	.c-o h1 {
-		font-size: 9vw;
+		font-size: 6vw;
+	}
+
+}
+
+@media (min-width: 301px) and (max-width: 400px) {
+	#content-right .c-o {
+		height: 70px;
+	}
+
+	.c-o h1 {
+		font-size: 7vw;
 	}
 }
+
+@media (min-width: 401px) and (max-width: 620px) {
+	#content-right .c-o {
+		height: 80px;
+	}
+	.c-o h1 {
+		font-size: 8vw;
+	}
+}
+
+
+
 
 @media (min-width: 1199px) {
 	.sep-text{

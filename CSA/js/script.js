@@ -11,10 +11,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	});
 
 	var searchBar = document.getElementById("search-bar");
+	var searchBarCol = document.getElementById("search-bar-col");
 	var searchBarMobile = document.getElementById("search-bar-mobile");
 	var searchBarText = document.getElementById("search-bar-text");
+	var searchBarTextCol = document.getElementById("search-bar-text-col");
 	var searchBarTextMobile = document.getElementById("search-bar-text-mobile");
 	var field = document.getElementById("search-query");
+	var fieldCol = document.getElementById("search-query-col");
 	var fieldMobile = document.getElementById("search-query-mobile");
 
 
@@ -33,6 +36,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		searchBar.classList.add("deanimate-search-bar");
 		searchBarText.classList.remove("hidden");
 	}
+
+	var height = searchBarTextCol.clientHeight;
+	var class_height = "height: " + height + "px;";
+
+	document.getElementById("search-bar-text-col").addEventListener("click", function() {
+		searchBarTextCol.classList.add("hidden");
+		fieldCol.classList.remove("hidden");
+		document.querySelector("#search-query-col").setAttribute("style", class_height);
+		fieldCol.focus();
+	});
+
+
+	// fieldCol.onblur = function() {
+	// 	fieldCol.classList.add("hidden");
+	// 	searchBarTextCol.classList.remove("hidden");
+	// }
 
 	document.getElementById("search-bar-text-mobile").addEventListener("click", function() {
 		searchBarTextMobile.classList.add("hidden");
